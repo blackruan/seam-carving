@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Project </title>
+  <style>
+  #banner {
+    background-color: rgba(102, 204, 255,0.75);
+    padding: 0.25em;
+    font-family: "Verdana";
+    border-style: outset;
+  }
+  #overview {
+    background-color: #ffffff;
+    padding: 0.25em;
+    font-family: "Verdana";
+    color: #000066;
+  }
+  #approach {
+    background-color: #ffffff;
+    padding: 0.25em;
+    color: #000066;
+    font-family: "Verdana";
+  }
+  #results {
+    background-color: #cce6ff;
+    padding: 0.25em;
+    font-family: "Verdana";
+    color: #000099;
+    border-style: outset;
+  }
+  #deliverables {
+    background-color: #cce6ff;
+    padding: 0.25em;
+    font-family: "Verdana";
+    color: #000099;
+    border-style: outset;
+  }
+  #tb1 {
+    width: 100%;
+  }
+  #tb2 {
+    width: 100%;
+  }
+  h1 {
+    color: rgba(0,0,120,0.5);
+  }
+  .button1 { font-weight: bold; font-size: 95%; text-transform: uppercase;
+              background-color: #9494b8; cursor: pointer; cursor: hand;
+              width: 200px; height: 35px; border-radius: 4px; border: 1px;
+              font-family: "Verdana"; }
+  a:link { color: #ffffff; }
+  a:visited { color: #ffffff; }
+  a:hover { color: #0099ff; }
+  a:active { color: #ffffff; }            
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body bgcolor="#fff5e6">
+
+  <div id="banner">
+    <h1> Project: Seam Carving </h1>
+    <h3> Clarence Cheung &nbsp; Jin Ruan
+  </div>
+
+  <div id="overview">
+    <h2> Overview </h2>
+    <p> The purpose of content-aware retargeting is to resize images and videos for 
+        different aspect ratios while still retaining the important features of the content. 
+        Cropping or scaling produces unwanted distortions in the important regions, 
+        whereas content-aware retargeting creates more aesthetically satisfying results by 
+        preserving the important contents. 
+        Seam carving is a popular technique applied to content-aware retargeting and 
+        we implement dynamic programming and minimum-cost graph-cut algorithms, 
+        and present a heuristic approach based on this technique.  
+    </p>
+  </div>
+
+  <div id="approach">
+    <h2> Approach </h2>
+    <table id="tb1">
+      <tr> 
+        <td width="33%">
+          <h3> Dynamic Programming </h3> 
+        <td width="33%">
+           <h3> Minimum S/T graph cut </h3>    
+        <td width="33%">
+           <h3> Look-ahead energy </h3>
+      </tr>
+      <tr>
+        <td>          
+          <p> Dynamic programming is used in image retargeting. 
+              Suppose we have the energy function of the image, we compute the cumulative
+              energy matrix M using the equation below and do backtracking 
+              to find the optimal seam for removal.
+          </p>
+        </td>   
+        <td> 
+          <p> Minimum S/T graph cut, equivalently Maximum-flow, is used in video retargeting. 
+              A video frame can be represented by a node graph (see below), where the edges are 
+              energy gradient of the image. The graph cut method provides an optimal cut 
+              like the dynamic programming approach, and can be extended to process 
+              a sequence of video frames as a 3D graph.
+          </p>
+        </td>  
+        <td>    
+          <p> Rather than constructing a 3D video cube, our method looks ahead of video frames
+              and takes a linear combination of energies from future frames. 
+              The time for seam removals are much faster than a 3D graph cut.  
+          </p>
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <img src="766results/dp2.png" />
+        <td>
+          <img src="766results/gc3.png" />
+        <td>
+      </tr>        
+    </table> 
+  </div>      
+  
+  <div id="results">
+    <h2> Results </h2>
+    <table>
+	  <tr>
+		<td>  
+		  <form action="images.html" method="get">
+			<input class="button1" type="submit" value="Image Results"/>
+		  </form>
+		</td>
+		<td>  
+		  <form action="videos.html" method="get">
+		  <input class="button1" type="submit" value="Video Results"/>
+		  </form>
+		</td>
+	  </tr>
+	</table> 
+  </div>
+  
+  <div id="deliverables">
+    <h2> Deliverables </h2>
+    <table id="tb2">
+      <tr>
+        <td width="30%">
+    	  <div id="docs">
+           <h3> Documents </h3>
+           <table>
+             <tr>
+               <td>
+                 <form action="766docs/cs766proposal_cheung_ruan.pdf" method="get">
+                   <input class="button1" type="submit" formtarget="_blank" value="Proposal"/>
+                 </form>
+           	   </td>
+               <td>
+                 <form action="766docs/cs766mid_cheung_ruan.pdf" method="get">
+                   <input class="button1" type="submit" formtarget="_blank" value="Progress Report"/>
+                 </form>
+           	   </td>
+           	   <td>
+                 <form action="766docs/cs766final_cheung_ruan.pdf" method="get">
+                   <input class="button1" type="submit" formtarget="_blank" value="Final Report"/>
+                 </form>
+           	   </td>
+           	 </tr>  
+            </table>
+          </div>
+        <td width="30%">
+          <div id="codes">
+            <h3> Executable Code Used in Project</h3>
+            <table>
+              <tr>
+                <td>  
+                  <form action="766codes" method="get">
+                    <input class="button1" type="submit" formtarget="_blank" value="Code"/>
+                  </form>
+                </td>
+                <td>  
+                  <form action="766codes/web_demo" method="get">
+                  <input class="button1" type="submit" formtarget="_blank" value="Web Demo Code"/>
+                  </form>
+                </td>
+              </tr>
+            </table>      
+          </div>
+      </tr>    
+    </table>
+  </div>
+  
+  <div id="ref">
+    <h2> Reference </h2>
+    <ul>
+      <li>Avidan, S., AND Shamir, A. 2007. Seam carving for content-aware image resizing. 
+      In <i>Proceedings of SIGGRAPH</i>, Article No. 10.
+      <br>
+      <li>Avidan, S., Rubinstein, M., AND Shamir, A. 2008. Improved seam carving for video retargeting. 
+    In <i>Proceedings of SIGGRAPH</i>, Article No. 16.
+      <br>
+      <li>Grundmann, M., Kwatra, V., Han, M., AND Essa, I. 2010. Discontinuous seam-carving for video retargeting. 
+    In <i>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>
+    </ul>
+  </div>
+  
+  <hr>
+  
+</body>
+
+</html>

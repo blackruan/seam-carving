@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> Image Results </title>
+  <style>
+  #banner {
+    background-color: rgba(102, 204, 255,0.75);
+    padding: 0.25em;
+    font-family: "Verdana";
+    border-style: outset;
+  }
+  #gallery {
+    background-color: #ffffff;
+    padding: 0.25em;
+    font-family: "Verdana";
+    color: #000066;
+  }
+  #approach {
+    background-color: #ffffff;
+    padding: 0.25em;
+    color: #000066;
+    font-family: "Verdana";
+  }
+  #tb1 {
+    width: 100%;
+  }
+  #tb2 {
+    width: 100%;
+  }
+  h1 {
+    color: rgba(0,0,120,0.5);
+  }
+  .button1 { font-weight: bold; font-size: 95%; text-transform: uppercase;
+              background-color: #9494b8; cursor: pointer; cursor: hand;
+              width: 300px; height: 35px; border-radius: 4px; border: 1px;
+              font-family: "Verdana"; }
+  a:link { color: #0099ff;  }
+  a:visited { color: #0099ff;  }
+  a:hover { color: #0099ff; }
+  a:active { color: #0099ff; }            
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body bgcolor="#fff5e6">
+
+  <div id="banner">
+    <h1> Project: Seam Carving </h1>
+    <h3> Clarence Cheung &nbsp; Jin Ruan
+  </div>
+
+  <div id="gallery">
+    <h2> Gallery (Videos) </h2>
+    <p> Note: Right click and "Save Link As" to download files </p>
+    
+    <table>
+      <tr>
+        <td> Original
+        <td> Our method
+      </tr>
+      <tr>
+        <td> <a href="766results/videos/ratatouille1-resize.mov" target="_blank">
+             <img src="766results/videos/ratatouille1-resize_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/sc-ratatouille1-resize260.mov" target="_blank">
+             <img src="766results/videos/sc-ratatouille1-resize260_1.png" width="80%" height="80%" /> </a>  
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <table>
+      <tr>
+        <td> Original
+        <td> Independent Frame Vertical Seam Removal
+        <td> Our implementation (3D Graph Cut)
+        <td> Our method (Look ahead energy)
+      </tr>
+      <tr>
+        <td> <a href="766results/videos/golf.mov" target="_blank">
+             <img src="766results/videos/golf_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/seam-ind.mov" target="_blank">
+             <img src="766results/videos/seam-ind_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/seams-vertical.mov" target="_blank">
+             <img src="766results/videos/seams-vertical_1.png" width="80%" height="80%" /> </a>       
+        <td> <a href="766results/videos/seam-our.mov" target="_blank">
+             <img src="766results/videos/seam-our_1.png" width="80%" height="80%" /> </a>  
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <table>
+      <tr>
+        <td> Original
+        <td> Rubinstein
+        <td> Our method (Look ahead energy)
+      </tr>
+      <tr>
+        <td> <a href="766results/videos/highway.mov" target="_blank">
+             <img src="766results/videos/highway_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/highway_rubinstein.mov" target="_blank">
+             <img src="766results/videos/highway_rubinstein_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/highway_our-5frame.mov" target="_blank">
+             <img src="766results/videos/highway_our-5frame_1.png" width="80%" height="80%" /> </a>  
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <table>
+      <tr>
+        <td> Original
+        <td> Rubinstein
+        <td> Our method (Look ahead energy)
+      </tr>
+      <tr>
+        <td> <a href="766results/videos/valkyrie_orig.mov" target="_blank">
+             <img src="766results/videos/valkyrie_orig_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/valkyrie_rubinstein.mov" target="_blank">
+             <img src="766results/videos/valkyrie_rubinstein_1.png" width="80%" height="80%" /> </a>
+        <td> <a href="766results/videos/valkyrie_our-5frame.mov" target="_blank">
+             <img src="766results/videos/valkyrie_our-5frame_1.png" width="80%" height="80%" /> </a>  
+      </tr>
+    </table>
+    
+    <hr>
+    
+    <form action="index.html" method="get">
+      <input class="button1" type="submit" value="Back to main page"/>
+    </form>
+     
+  </div>
+
+
+<!--
+  <div id="approach">
+    <h2> Approach </h2>		
+	<table>
+	  <tr>
+		<td>  
+		  <form action="766codes" method="get">
+			<input class="button1" type="submit" formtarget="_blank" value="Image Results"/>
+		  </form>
+		</td>
+		<td>  
+		  <form action="766codes" method="get">
+		  <input class="button1" type="submit" formtarget="_blank" value="Video Results"/>
+		  </form>
+		</td>
+	  </tr>
+	</table> 	
+  </div>      
+-->	
+  
+  <div id="ref">
+    <h2> Reference </h2>
+    <ul>
+    <li>Avidan, S., AND Shamir, A. 2007. Seam carving for content-aware image resizing. 
+    In <i>Proceedings of SIGGRAPH</i>, Article No. 10.
+    <br>
+    <li>Avidan, S., Rubinstein, M., AND Shamir, A. 2008. Improved seam carving for video retargeting. 
+    In <i>Proceedings of SIGGRAPH</i>, Article No. 16.
+    <br>
+    <li>Grundmann, M., Kwatra, V., Han, M., AND Essa, I. 2010. Discontinuous seam-carving for video retargeting. 
+    In <i>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>  
+    <li><a href="http://connection-endpoint.de/2007/11/25/seam-carving/" target="_blank">
+    http://connection-endpoint.de/2007/11/25/seam-carving/</a>
+    <li><a href="http://www.huffingtonpost.co.uk/2015/07/10/who-said-it-donald-trump-or-mr-burns_n_7768108.html" target="_blank">
+    http://www.huffingtonpost.co.uk/2015/07/10/who-said-it-donald-trump-or-mr-burns_n_7768108.html</a>
+    </ul>
+  </div>
+  
+  <hr>
+  
+</body>
+
+</html>
