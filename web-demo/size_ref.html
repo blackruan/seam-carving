@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> dimension reference </title> 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <style>
+  #resizable { width: 640px; height: 480px; padding: 0.1em; }
+  .ui-resizable-helper {
+    border: 1px solid blue;
+    background-color: none;
+    opacity: 1;
+  }
+  .ui-resizable-ghost {
+     opacity:0 !important;
+  }
+  #board { width: 1520px; height: 1520px ; 
+           border-style: solid; border-width: 3px; background-color: #000000;}
+  </style>
+  <script>
+  $(function() {
+    $( "#resizable" ).resizable({
+      ghost: true,
+      minWidth: 1, maxWidth: 1500,
+      minHeight: 1, maxHeight: 1500,
+      stop: function( event, ui ) {
+        var dim = [ui.size.width,ui.size.height]; 
+        document.getElementById("display").innerHTML="result[w,h]= "+dim[0]+" x "+dim[1];
+        $('html,body').scrollTop(0);
+	  }, 
+	  resize: function( event, ui ) {
+        var dim = [ui.size.width,ui.size.height]; 
+        document.getElementById("display").innerHTML="result[w,h]= "+dim[0]+" x "+dim[1];
+	  } 
+    });
+  });
+  </script>
+
+<body bgcolor="#FFFFF5">
+<font face="Comic sans MS">
+  
+  <h2> select desired dimension </h2>
+  <h3> simply drag the box and get the dimension 
+       <br>
+       default[w,h]= 640 x 480, max[w,h]= 1500 x 1500
+  </h3>
+<!--  <button onclick="closeTab()">Close</button>
+  <script>
+    function closeTab() { if (confirm("close tab?")) { close();} }
+  </script> 
+-->
+<!--
+  <form>
+    <table>
+      <tr>
+        <td> Width
+        <td> <input name="width" type="number" min="1" max="1500" />
+        <td> <input name="button" type="button" value="adjust"/>
+      </tr>
+      <tr>
+        <td> Height
+        <td> <input name="height" type="number" min="1" max="1500" />
+      </tr>  
+    </table>
+  </form>
+-->  
+  
+  <h2> <p id="display">result[w,h]= 640 x 480</p> </h2>
+
+  <div id="board">
+  <div id="resizable" class="ui-widget-content"> 
+    <div style="background-color: #99ccff; height: 100%;"></div>
+  </div>
+  </div>
+  
+</body>
+</html>
