@@ -4,7 +4,7 @@
 Project page: [https://blackruan.github.io/seam-carving/](https://blackruan.github.io/seam-carving/)
 
 ## Overview
-In this project, we have done the following three things:
+This is the class project of [CS766 Computer Vision](http://pages.cs.wisc.edu/~mohitg/courses/CS766/). In this project, we have done the following three things:
 
 1. Implemented the seam-carving algorithm in papers [Seam Carving for Content-Aware Image Resizing](http://www.faculty.idc.ac.il/arik/SCWeb/imret/) and [Improved Seam Carving for Video Retargeting](http://www.faculty.idc.ac.il/Arik/SCWeb/vidret/index.html).
 
